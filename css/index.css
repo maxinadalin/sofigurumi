@@ -1,0 +1,262 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+}
+
+.btn-outline-success {
+  --bs-btn-color: #f6baba;
+  --bs-btn-border-color: #f6baba;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #f6baba;
+  --bs-btn-hover-border-color: #f6baba;
+  --bs-btn-focus-shadow-rgb: 25,135,84;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #f6baba;
+  --bs-btn-active-border-color: #f6baba;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #f6baba;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #f6baba;
+  --bs-gradient: none;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+.logo {
+  width: 60px;
+}
+
+.nav-item:hover{
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.bd-placeholder-img1{
+  width: 100%;
+  height: 100%;
+  background-image: url("../imagenes/gnomo1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+ 
+}
+.bd-placeholder-img3{
+  width: 100%;
+  height: 100%;
+  background-image: url("../imagenes/yoda.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+}
+.bd-placeholder-img2{
+  width: 100%;
+  height: 100%;
+  background-image: url("../imagenes/gnomo3.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+}
+
+/*---------------------------------------------------------------bolitas----------------------------------------------------------------*/
+
+.col-lg-4{
+  text-align: center;
+}
+
+/*---------------------------------------------------------------FOOTER----------------------------------------------------------------*/
+.footer {
+  margin-top: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #212529;
+}
+
+.footer h2 {
+  color: #f6baba;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 17px;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #212529;
+}
+
+.footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529;
+}
+
+.footer .links a {
+  margin: 0px 30px;
+  background-color: #212529;
+}
+
+.footer .links a i {
+  color: #f6baba;
+  font-size: 2rem;
+  background-color: #212529;
+}
+
+.footer .links a i:hover {
+  color: #000;
+  transition: 0.7s;
+}
+
+.footer p {
+  color: #f6baba;
+  display: inline;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #212529;
+  text-align: center;
+}
+
+/* Whatsapp*/
+.whatsapp {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+}
+
+.whatsapp a {
+  background: #25d366;
+}
+
+.whatsapp a i {
+  margin-top: 10px;
+  background-color: #25d366;
+  color: #fff;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------CATEGORIAS--------------------------------------------------------------*/
+
+
+
+article{
+  margin-top: 3%;
+  position: relative;
+  width: 100%;
+  transition: all .3s ease;
+}
+
+
+
+article img:first-child{
+  box-shadow: 0 60px 60px
+  -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+article .img2{
+
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+article:hover{
+  transform: 
+        perspective(250px)
+        rotateX(10deg)
+        translateY(-5%)
+        translateZ(0);
+}
+article::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width:100% ;
+  background-image: 
+      linear-gradient( to bottom
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%,
+      );
+      opacity: 0;
+      transition: all .3s ease;
+}
+
+article:hover::before{
+  opacity: 1;
+}
+
+article:hover .img2{
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------RESPONSIVE CSS -------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
